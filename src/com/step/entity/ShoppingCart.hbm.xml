@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+
+	<class name="com.step.entity.ShoppingCart" table="shoppingcart">
+	
+		<id name="carId" column="carId">
+			<generator class="native"></generator><!-- 自动增长 -->
+		</id>
+		<property name="count" column="count"></property>
+		<property name="totalMoney" column="totalMoney"></property>
+		
+		<many-to-one name="book"  column="book_id"></many-to-one>
+		<many-to-one name="user"  column="user_id"></many-to-one>
+		
+	</class>
+	
+</hibernate-mapping>

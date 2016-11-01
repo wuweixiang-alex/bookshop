@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+
+	<class name="com.step.entity.Book" table="book">
+	
+		<id name="bId" column="bId">
+			<generator class="native"></generator><!-- 自动增长 -->
+		</id>
+		<property name="image" column="image"></property>
+		<property name="price" column="price"></property>
+		<property name="described" column="described"></property>
+		
+		<!-- Hibernate默认使用延迟加载的模式，即对于集合属性都使用延迟加载来提高执行效率，如果想立刻加载，可以使用 -->
+		<!--    Hibernate.initialize(emp.getJobs())； 关闭延迟加载 （立刻加载 添加的集合属性） -->
+		<many-to-one name="type_tId" column="type_tId" lazy="false"></many-to-one>
+		
+		<property name="stock" column="stock"></property>
+		
+	</class>
+	
+</hibernate-mapping>

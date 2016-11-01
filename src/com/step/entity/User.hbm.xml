@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+
+	<class name="com.step.entity.User" table="user">
+		<id name="uid" column="uid">
+			<generator class="native"></generator><!-- 自动增长 -->
+		</id>
+		<property name="username" column="username"></property>
+		<property name="password" column="password"></property>
+		<property name="sex" column="sex"></property>
+		<property name="email" column="email"></property>
+		<property name="tel" column="tel"></property>
+		<property name="realname" column="realname"></property>
+		<property name="idcard" column="idcard"></property>
+		<property name="address" column="address"></property>
+	</class>
+	
+</hibernate-mapping>

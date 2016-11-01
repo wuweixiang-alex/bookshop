@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.step.entity.Order" table="_order">
+
+		<id name="orderNumber" column="orderNumber">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="date" column="orderDate"></property>
+
+		<many-to-one name="user" class="com.step.entity.User"></many-to-one>
+
+		<many-to-one name="book" class="com.step.entity.Book"></many-to-one>
+
+		<property name="count" column="count"></property>
+		
+		<property name="totalMoney" column="totalMoney"></property>
+
+		<property name="flag_pay" column="flag_pay"></property>
+		
+		<property name="flay_send" column="flay_send"></property>
+
+	</class>
+
+</hibernate-mapping>

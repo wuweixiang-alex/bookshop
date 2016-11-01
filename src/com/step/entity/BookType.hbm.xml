@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+
+	<class name="com.step.entity.BookType" table="book_type">
+	
+		<id name="tId" column="tId">
+			<generator class="native"></generator><!-- 自动增长 -->
+		</id>
+		<property name="type" column="type"></property>
+		<property name="display" column="display"></property>
+		
+		
+	</class>
+	
+</hibernate-mapping>
